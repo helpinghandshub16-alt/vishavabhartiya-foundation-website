@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /backend/
+Sitemap: https://silver-butterfly-682205.hostingersite.com/sitemap.xml
