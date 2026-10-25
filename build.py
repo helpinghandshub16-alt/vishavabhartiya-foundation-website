@@ -647,22 +647,14 @@ def build_impact():
   <p class="mt"><a class="btn btn-line" href="registrations.html">{t("View documents","दस्तावेज़ देखें")}</a></p>
 </div></section>
 
-<section class="alt" id="collaborations" style="scroll-margin-top:100px"><div class="wrap">
-  <div class="partner-box">
-    <div class="sec-head" style="margin-bottom:24px"><span class="eyebrow" style="color:var(--sky)">{t("Partner Field Activities","साझेदार संस्था की गतिविधियाँ")}</span><h2>{t("Programmes of a partner organisation","साझेदार संस्था के कार्यक्रम")}</h2>
-    <p>{t("These photos show field work of partner organisation <b>Yuva Kaushal Vikas Mandal (YKVM)</b> in Hamirpur and Banda districts, Uttar Pradesh, for which our team provided online support. They are not direct implementation by Vishavabhartiya Foundation and are not counted in our impact figures.","ये फ़ोटो साझेदार संस्था <b>युवा कौशल विकास मण्डल (YKVM)</b> के हमीरपुर एवं बांदा ज़िलों, उत्तर प्रदेश के फ़ील्ड कार्य की हैं, जिनमें हमारी टीम ने ऑनलाइन सहयोग दिया। ये विश्वभारतीय फाउंडेशन द्वारा प्रत्यक्ष रूप से लागू किए गए कार्य नहीं हैं और हमारे प्रभाव-आँकड़ों में शामिल नहीं हैं।")}</p></div>
-    <div class="gallery partner" data-render="partners"></div>
-  </div>
-</div></section>
-
 <section id="activities" style="scroll-margin-top:100px"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">{t("Activities &amp; updates","गतिविधियाँ एवं अपडेट")}</span><hr class="rule"><h2>{t("Recent activities","हाल की गतिविधियाँ")}</h2></div>
   <div class="grid g3" data-render="activities"></div>
 </div></section>
 {CTA()}'''
     page("impact.html", t("Our Impact, Achievements &amp; Honours","हमारा प्रभाव, उपलब्धियाँ एवं सम्मान"),
-         t("Impact of Vishavabhartiya Foundation and its founder's legacy since 1998; founder's honours, Foundation certifications, partner activities and recent updates.",
-           "विश्वभारतीय फाउंडेशन का प्रभाव एवं 1998 से संस्थापक की विरासत; संस्थापक के सम्मान, फाउंडेशन प्रमाणन, साझेदार गतिविधियाँ एवं नवीनतम अपडेट।"), body)
+         t("Impact of Vishavabhartiya Foundation and its founder's legacy since 1998; founder's honours, Foundation certifications and recent updates.",
+           "विश्वभारतीय फाउंडेशन का प्रभाव एवं 1998 से संस्थापक की विरासत; संस्थापक के सम्मान, फाउंडेशन प्रमाणन एवं नवीनतम अपडेट।"), body)
 
 def build_media():
     body = banner(t("Media","मीडिया"), t("Media Coverage","मीडिया कवरेज"), t("Our programmes as reported by the Nagpur press, from recent Foundation events to archive clippings of the founder's earlier work.","नागपुर के समाचार-पत्रों में हमारे कार्यक्रम — फाउंडेशन के हाल के आयोजनों से लेकर संस्थापक के पूर्व कार्य की पुरानी कतरनों तक।")) + f'''
@@ -675,7 +667,7 @@ def build_media():
            "विश्वभारतीय फाउंडेशन, नागपुर का समाचार कवरेज एवं संस्थापक के कार्य की पुरानी कतरनें: द हितवाद, लोकमत, दैनिक भास्कर आदि।"), body)
 
 def build_gallery():
-    body = banner(t("Gallery","गैलरी"), t("Photo Gallery","फ़ोटो गैलरी"), t("Real photographs, clearly labelled: Foundation activities, the founder's legacy work, and — separately — partner field activities.","वास्तविक फ़ोटो, स्पष्ट लेबल के साथ: फाउंडेशन की गतिविधियाँ, संस्थापक की विरासत, और — अलग से — साझेदार संस्था की गतिविधियाँ।")) + f'''
+    body = banner(t("Gallery","गैलरी"), t("Photo Gallery","फ़ोटो गैलरी"), t("Real photographs, clearly labelled: Foundation activities, the founder's legacy work and honours.","वास्तविक फ़ोटो, स्पष्ट लेबल के साथ: फाउंडेशन की गतिविधियाँ, संस्थापक की विरासत एवं सम्मान।")) + f'''
 <section><div class="wrap">
   <div class="sec-head"><span class="eyebrow">{t("Foundation Programmes","फाउंडेशन कार्यक्रम")}</span><hr class="rule"><h2>{t("Foundation &amp; founder's legacy","फाउंडेशन एवं संस्थापक की विरासत")}</h2></div>
   <div class="filters" role="group" aria-label="{t("Filter photos","फ़ोटो छाँटें")}" data-target="g-main">
@@ -690,14 +682,9 @@ def build_gallery():
     <button type="button" data-f="community" aria-pressed="false">{t("Community","समुदाय")}</button>
   </div>
   <div class="gallery" id="g-main" data-render="gallery"></div>
-</div></section>
-<section class="alt" id="partners" style="scroll-margin-top:100px"><div class="wrap"><div class="partner-box">
-  <div class="sec-head" style="margin-bottom:24px"><span class="eyebrow" style="color:var(--sky)">{t("Partner Field Activities","साझेदार संस्था की गतिविधियाँ")}</span><h2>{t("Yuva Kaushal Vikas Mandal (YKVM), Uttar Pradesh","युवा कौशल विकास मण्डल (YKVM), उत्तर प्रदेश")}</h2>
-  <p>{t("Field work of our partner organisation in Bundelkhand, supported online by our team. Not direct implementation by Vishavabhartiya Foundation.","बुंदेलखंड में साझेदार संस्था का फ़ील्ड कार्य, जिसमें हमारी टीम ने ऑनलाइन सहयोग दिया। यह विश्वभारतीय फाउंडेशन का प्रत्यक्ष कार्यान्वयन नहीं है।")}</p></div>
-  <div class="gallery partner" data-render="partners"></div>
-</div></div></section>'''
+</div></section>'''
     page("gallery.html", t("Photo Gallery","फ़ोटो गैलरी"),
-         t("Photo gallery of Vishavabhartiya Foundation: Yoga Day and Earth Day 2026, the founder's eye camps and Pulse Polio drives, and separately labelled partner activities.",
+         t("Photo gallery of Vishavabhartiya Foundation: Yoga Day and Earth Day 2026, the founder's eye camps and Pulse Polio drives, and the founder's honours.",
            "विश्वभारतीय फाउंडेशन की फ़ोटो गैलरी: योग दिवस एवं पृथ्वी दिवस 2026, संस्थापक के नेत्र शिविर एवं पल्स पोलियो अभियान, और अलग से चिह्नित साझेदार गतिविधियाँ।"), body)
 
 def build_registrations():

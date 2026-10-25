@@ -6,13 +6,13 @@
   var BASE = document.documentElement.getAttribute("data-base") || "";
   var UI = {
     en: { upcoming: "Upcoming", copy: "Copy", copied: "Copied", foundation: "Foundation activity", legacy: "Founder's legacy (pre-2026)", honour: "Founder's honour",
-          partner: "Partner field activity – YKVM, Uttar Pradesh", months: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+          months: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
           fix: "Please correct the highlighted fields.", sending: "Sending…", sent: "Thank you. Your details have been received. We will reply soon.",
           failed: "We could not submit the form online. Your details are not lost — please send them using one of the options below.",
           offline: "Online submission is not connected yet, so nothing has been sent. Please send your details using one of the options below:",
           wa: "Send on WhatsApp", mail: "Send by email", spam: "Please wait a moment and try again.", close: "Close" },
     hi: { upcoming: "आगामी", copy: "कॉपी", copied: "कॉपी हुआ", foundation: "फाउंडेशन गतिविधि", legacy: "संस्थापक की विरासत (2026 से पहले)", honour: "संस्थापक सम्मान",
-          partner: "साझेदार संस्था की गतिविधि – YKVM, उत्तर प्रदेश", months: ["जनवरी","फ़रवरी","मार्च","अप्रैल","मई","जून","जुलाई","अगस्त","सितंबर","अक्टूबर","नवंबर","दिसंबर"],
+          months: ["जनवरी","फ़रवरी","मार्च","अप्रैल","मई","जून","जुलाई","अगस्त","सितंबर","अक्टूबर","नवंबर","दिसंबर"],
           fix: "कृपया चिह्नित जानकारी सही करें।", sending: "भेजा जा रहा है…", sent: "धन्यवाद। आपकी जानकारी प्राप्त हो गई है। हम शीघ्र उत्तर देंगे।",
           failed: "फ़ॉर्म ऑनलाइन जमा नहीं हो सका। आपकी जानकारी सुरक्षित है — कृपया नीचे दिए किसी विकल्प से भेजें।",
           offline: "ऑनलाइन जमा करने की सुविधा अभी जुड़ी नहीं है, इसलिए अभी कुछ भी नहीं भेजा गया है। कृपया नीचे दिए किसी विकल्प से अपनी जानकारी भेजें:",
@@ -56,10 +56,6 @@
     return '<figure data-cat="' + esc(g.cat) + '"><span class="src-badge ' + era + '">' + UI[era] + '</span>' + img(g.src, L(g.title), "", L(g.title) + " — " + L(g.caption)) +
       '<figcaption><b>' + esc(L(g.title)) + '</b>' + esc(L(g.caption)) + '</figcaption></figure>';
   }
-  function partnerItem(g) {
-    return '<figure data-cat="partner"><span class="src-badge partner">' + UI.partner + '</span>' + img(g.src, L(g.title), "", L(g.title) + " — " + UI.partner) +
-      '<figcaption><b>' + esc(L(g.title)) + '</b>' + UI.partner + '</figcaption></figure>';
-  }
   function fill(sel, list, fn) {
     $$(sel).forEach(function (el) { var n = parseInt(el.getAttribute("data-limit") || "0", 10); el.innerHTML = (n ? list.slice(0, n) : list).map(fn).join(""); });
   }
@@ -69,7 +65,6 @@
   fill("[data-render=recognition]", D.recognition || [], awardCard);
   fill("[data-render=training]", D.training || [], awardCard);
   fill("[data-render=gallery]", D.gallery || [], galleryItem);
-  fill("[data-render=partners]", D.partners || [], partnerItem);
   function orgCard(o) {
     var mark = o.logo ? '<img src="' + esc(BASE + o.logo) + '" alt="' + esc(L(o.name)) + ' logo" loading="lazy">' : '<span aria-hidden="true">' + esc(o.initials || "") + '</span>';
     return '<div class="org"><div class="org-logo' + (o.logo ? " has-img" : "") + '">' + mark + '</div><div><h3>' + esc(L(o.name)) + '</h3><span class="role">' + esc(L(o.role)) + '</span><p>' + esc(L(o.text)) + '</p></div></div>';

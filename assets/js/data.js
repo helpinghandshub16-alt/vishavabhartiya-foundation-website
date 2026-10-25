@@ -153,30 +153,12 @@ window.VBF = {
       title: { en: "Felicitation at a health camp", hi: "स्वास्थ्य शिविर में सम्मान" }, caption: { en: "Support for a differently-abled beneficiary", hi: "दिव्यांग लाभार्थी को सहयोग" } }
   ],
 
-  /* ---------- Partner field activities (YKVM, Uttar Pradesh) — shown separately, never as Foundation work ---------- */
-  partners: [
-    { src: "assets/img/partner/youth-training.webp", title: { en: "Youth skill training session", hi: "युवा कौशल प्रशिक्षण सत्र" } },
-    { src: "assets/img/partner/village-youth-session.webp", title: { en: "Village youth awareness session", hi: "ग्रामीण युवा जागरूकता सत्र" } },
-    { src: "assets/img/partner/organic-compost-unit.webp", title: { en: "Organic compost production unit", hi: "जैविक खाद उत्पादन इकाई" } },
-    { src: "assets/img/partner/fpo-outlet-visit.webp", title: { en: "Farmer producer company outlet visit", hi: "किसान उत्पादक कंपनी आउटलेट भ्रमण" } },
-    { src: "assets/img/partner/fpo-organic-products.webp", title: { en: "Organic products made by farmer groups", hi: "किसान समूहों के जैविक उत्पाद" } },
-    { src: "assets/img/partner/agri-input-centre.webp", title: { en: "Agri-input centre for farmers", hi: "किसानों के लिए कृषि-इनपुट केंद्र" } },
-    { src: "assets/img/partner/floriculture-exposure-visit.webp", title: { en: "Floriculture exposure visit", hi: "पुष्प-उत्पादन अध्ययन भ्रमण" } },
-    { src: "assets/img/partner/handpump-soak-pit.webp", title: { en: "Handpump platform and soak pit", hi: "हैंडपंप चबूतरा और सोख्ता गड्ढा" } },
-    { src: "assets/img/partner/traditional-farming.webp", title: { en: "Field work with farmers", hi: "किसानों के साथ खेत पर कार्य" } },
-    { src: "assets/img/partner/gram-panchayat-meeting.webp", title: { en: "Gram panchayat committee meeting", hi: "ग्राम पंचायत समिति बैठक" } }
-  ],
-
   /* ---------- OUR PARTNERS (About page) ----------
      To add a logo: put a square PNG/WebP (min 200×200, transparent background) in assets/img/partners/
      and write its path in "logo". Use a logo only with the organisation's permission.
      Without a logo, initials are shown automatically.
      group: "current" = partner of the Foundation (2026 →) · "legacy" = collaborated with the founder / earlier Sanstha */
   partnerOrgs: [
-    { group: "current", initials: "YKVM", logo: "assets/img/partners/ykvm.webp",
-      name: { en: "Yuva Kaushal Vikas Mandal (YKVM)", hi: "युवा कौशल विकास मण्डल (YKVM)" },
-      role: { en: "Programme partner · Uttar Pradesh", hi: "कार्यक्रम साझेदार · उत्तर प्रदेश" },
-      text: { en: "Farmer, youth, water and panchayat programmes in Hamirpur and Banda districts, with online support from our team.", hi: "हमीरपुर एवं बांदा ज़िलों में किसान, युवा, जल एवं पंचायत कार्यक्रम, हमारी टीम के ऑनलाइन सहयोग के साथ।" } },
     { group: "current", initials: "HS", logo: "",
       name: { en: "Hindurashtra Sangh", hi: "हिंदूराष्ट्र संघ" },
       role: { en: "Programme collaborator · 2026", hi: "कार्यक्रम सहयोगी · 2026" },
@@ -205,7 +187,6 @@ window.VBF = {
 
   /* ---------- Partner logo strip (About page, "Our Partners") — add/remove logos here ---------- */
   partnerLogos: [
-    { name: "Yuva Kaushal Vikas Mandal (YKVM)", logo: "assets/img/partners/ykvm.webp" },
     { name: "Bandhan Bank", logo: "assets/img/partners/bandhan-bank.webp" },
     { name: "ICAR – Krishi Vigyan Kendra", logo: "assets/img/partners/icar-kvk.webp" },
     { name: "Joint Empowerment Venture Action Foundation (JEVAF)", logo: "assets/img/partners/jevaf.webp" },
