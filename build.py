@@ -86,9 +86,9 @@ def SVC():   return t("Maharashtra Hospital &amp; Optical, A/3, New Diamond Naga
                       "महाराष्ट्र हॉस्पिटल एवं ऑप्टिकल, A/3, न्यू डायमंड नगर, खरबी मेन रोड, नागपुर 440024")
 def SOCIAL(cls="social"):
     s = CONFIG["social"]
-    yt = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z"/><path fill="#fff" d="m9.75 15.02 5.75-3.02-5.75-3.02z"/></svg>'
-    fb = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22z"/></svg>'
-    return f'<div class="{cls}"><a class="si yt" href="{s["youtube"]}" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">{yt}</a><a class="si fb" href="{s["facebook"]}" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">{fb}</a></div>'
+    yt = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z"/><path fill="#fff" d="m9.75 15.02 5.75-3.02-5.75-3.02z"/></svg>'
+    fb = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22z"/></svg>'
+    return f'<div class="{cls}" style="display:flex;gap:10px;align-items:center"><a class="si yt" style="background:#ff0000;color:#fff;width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center" href="{s["youtube"]}" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube">{yt}</a><a class="si fb" style="background:#1877f2;color:#fff;width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center" href="{s["facebook"]}" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">{fb}</a></div>'
 def NAME():  return t("Vishavabhartiya Foundation", "विश्वभारतीय फाउंडेशन")
 def EM(role, link=True):
     e = email(role)
@@ -192,16 +192,16 @@ def page(fname, title, desc, body, extra_head=""):
 <meta name="theme-color" content="#3a2214">
 <link rel="icon" type="image/png" href="{R()}assets/img/favicon.png"><link rel="apple-touch-icon" href="{R()}assets/img/apple-touch-icon.png">
 {FONTS}
-<link rel="stylesheet" href="{R()}assets/css/style.css">{extra_head}'''
+<link rel="stylesheet" href="{R()}assets/css/style.css?v=20261025b">{extra_head}'''
     inner = f'''{header(fname)}
 <main id="main">
 {body}
 </main>
 {footer()}
-<script src="{R()}assets/js/config.js"></script>
-<script src="{R()}assets/js/img-sizes.js"></script>
-<script src="{R()}assets/js/data.js"></script>
-<script src="{R()}assets/js/main.js"></script>'''
+<script src="{R()}assets/js/config.js?v=20261025b"></script>
+<script src="{R()}assets/js/img-sizes.js?v=20261025b"></script>
+<script src="{R()}assets/js/data.js?v=20261025b"></script>
+<script src="{R()}assets/js/main.js?v=20261025b"></script>'''
     full = f'''<!doctype html>
 <html lang="{LANG}" data-base="{R()}">
 <head>
@@ -1075,9 +1075,9 @@ for LANG in LANGS:
 
 site = CONFIG["site_url"].rstrip("/")
 cfg = {"siteUrl": site, "emails": CONFIG["emails"], "whatsapp": CONFIG["whatsapp"], "forms": CONFIG["forms"]}
-open(os.path.join(OUT, "assets/js/config.js"), "w", encoding="utf-8").write(
+open(os.path.join(OUT, "assets/js/config.js?v=20261025b"), "w", encoding="utf-8").write(
     "/* Generated from CONFIG in build.py. You may also edit here directly: emails and forms.endpoint take effect without a rebuild. */\nwindow.VBF_CONFIG = " + json.dumps(cfg, indent=2) + ";\n")
-open(os.path.join(OUT, "assets/js/img-sizes.js"), "w").write("window.VBF_SIZES=" + json.dumps(SIZES, separators=(",", ":")) + ";\n")
+open(os.path.join(OUT, "assets/js/img-sizes.js?v=20261025b"), "w").write("window.VBF_SIZES=" + json.dumps(SIZES, separators=(",", ":")) + ";\n")
 
 def loc(lang, f): return site + "/" + ("hi/" if lang == "hi" else "") + ("" if f == "index.html" else f)
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
