@@ -13,7 +13,7 @@ from PIL import Image
 
 # ======================================================================= CENTRAL CONFIGURATION
 CONFIG = {
-    "site_url": "https://helpinghandshub16-alt.github.io/vishavabhartiya-foundation-website",   # TODO(owner): replace with final domain, e.g. https://www.<your-domain>
+    "site_url": "https://vishavabhartiyafoundation.org",   # TODO(owner): replace with final domain, e.g. https://www.<your-domain>
     "emails": {
         "fallback": "vishavabhartiya.foundation@gmail.com",   # current working mailbox (keep until domain email is live)
         "info": "",        # e.g. info@<domain>      — leave "" until the mailbox is created and tested

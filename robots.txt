@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /backend/
-Sitemap: https://helpinghandshub16-alt.github.io/vishavabhartiya-foundation-website/sitemap.xml
+Sitemap: https://vishavabhartiyafoundation.org/sitemap.xml
