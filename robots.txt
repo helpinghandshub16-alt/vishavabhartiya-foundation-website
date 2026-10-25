@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /backend/
-Sitemap: https://silver-butterfly-682205.hostingersite.com/sitemap.xml
+Sitemap: https://helpinghandshub16-alt.github.io/vishavabhartiya-foundation-website/sitemap.xml

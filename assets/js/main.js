@@ -5,13 +5,13 @@
   var LANG = document.documentElement.lang === "hi" ? "hi" : "en";
   var BASE = document.documentElement.getAttribute("data-base") || "";
   var UI = {
-    en: { upcoming: "Upcoming", copy: "Copy", copied: "Copied", foundation: "Foundation activity", legacy: "Founder's legacy (pre-2026)",
+    en: { upcoming: "Upcoming", copy: "Copy", copied: "Copied", foundation: "Foundation activity", legacy: "Founder's legacy (pre-2026)", honour: "Founder's honour",
           partner: "Partner field activity – YKVM, Uttar Pradesh", months: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
           fix: "Please correct the highlighted fields.", sending: "Sending…", sent: "Thank you. Your details have been received. We will reply soon.",
           failed: "We could not submit the form online. Your details are not lost — please send them using one of the options below.",
           offline: "Online submission is not connected yet, so nothing has been sent. Please send your details using one of the options below:",
           wa: "Send on WhatsApp", mail: "Send by email", spam: "Please wait a moment and try again.", close: "Close" },
-    hi: { upcoming: "आगामी", copy: "कॉपी", copied: "कॉपी हुआ", foundation: "फाउंडेशन गतिविधि", legacy: "संस्थापक की विरासत (2026 से पहले)",
+    hi: { upcoming: "आगामी", copy: "कॉपी", copied: "कॉपी हुआ", foundation: "फाउंडेशन गतिविधि", legacy: "संस्थापक की विरासत (2026 से पहले)", honour: "संस्थापक सम्मान",
           partner: "साझेदार संस्था की गतिविधि – YKVM, उत्तर प्रदेश", months: ["जनवरी","फ़रवरी","मार्च","अप्रैल","मई","जून","जुलाई","अगस्त","सितंबर","अक्टूबर","नवंबर","दिसंबर"],
           fix: "कृपया चिह्नित जानकारी सही करें।", sending: "भेजा जा रहा है…", sent: "धन्यवाद। आपकी जानकारी प्राप्त हो गई है। हम शीघ्र उत्तर देंगे।",
           failed: "फ़ॉर्म ऑनलाइन जमा नहीं हो सका। आपकी जानकारी सुरक्षित है — कृपया नीचे दिए किसी विकल्प से भेजें।",
@@ -52,7 +52,7 @@
     return '<div class="award">' + img(a.img, L(a.title)) + '<div><span class="yr">' + esc(a.year) + '</span><h3>' + esc(L(a.title)) + '</h3><p><b>' + esc(L(a.by)) + '</b></p><p>' + esc(L(a.text)) + '</p></div></div>';
   }
   function galleryItem(g) {
-    var era = g.era === "foundation" ? "foundation" : "legacy";
+    var era = g.era === "foundation" || g.era === "honour" ? g.era : "legacy";
     return '<figure data-cat="' + esc(g.cat) + '"><span class="src-badge ' + era + '">' + UI[era] + '</span>' + img(g.src, L(g.title), "", L(g.title) + " — " + L(g.caption)) +
       '<figcaption><b>' + esc(L(g.title)) + '</b>' + esc(L(g.caption)) + '</figcaption></figure>';
   }

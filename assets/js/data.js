@@ -19,12 +19,12 @@ window.VBF = {
 
   /* ---------- Latest activities & announcements ---------- */
   activities: [
-    { date: "2026-10-10", upcoming: true, img: "assets/img/awards/global-sustainability-2026.webp",
+    { date: "2026-10-10", img: "assets/img/gallery/gsa-award-miranda-house-2026.webp",
       tag: { en: "Founder's honour", hi: "संस्थापक सम्मान" },
-      title: { en: "Founder named winner, Global Sustainability Awards 2026 — Individual Changemaker",
-               hi: "संस्थापक को ग्लोबल सस्टेनेबिलिटी अवॉर्ड्स 2026 — इंडिविजुअल चेंजमेकर श्रेणी में विजेता घोषित" },
-      text: { en: "Dr. Dhananjay K. Yerne, MD & CEO, is recognised for health-awareness work in Nagpur and Bhandara districts since 1998. The award is to be presented at Miranda House, University of Delhi.",
-              hi: "एमडी एवं सीईओ डॉ. धनंजय के. येरने को नागपुर और भंडारा ज़िलों में 1998 से स्वास्थ्य-जागरूकता कार्य के लिए चुना गया है। पुरस्कार मिरांडा हाउस, दिल्ली विश्वविद्यालय में प्रदान किया जाना है।" } },
+      title: { en: "Founder honoured at Global Sustainability Awards 2026 — Individual Changemaker (Top 35)",
+               hi: "ग्लोबल सस्टेनेबिलिटी अवॉर्ड्स 2026 में संस्थापक सम्मानित — इंडिविजुअल चेंजमेकर (टॉप 35)" },
+      text: { en: "Dr. Dhananjay K. Yerne, MD & CEO, received the award on 10 October 2026 at Miranda House, University of Delhi (Delhi Chapter), for health-awareness work in Nagpur and Bhandara districts since 1998.",
+              hi: "एमडी एवं सीईओ डॉ. धनंजय के. येरने ने 10 अक्टूबर 2026 को मिरांडा हाउस, दिल्ली विश्वविद्यालय (दिल्ली चैप्टर) में यह सम्मान प्राप्त किया — नागपुर एवं भंडारा ज़िलों में 1998 से स्वास्थ्य-जागरूकता कार्य के लिए।" } },
     { date: "2026-06-21", img: "assets/img/gallery/yoga-day-2026.webp",
       tag: { en: "Health", hi: "स्वास्थ्य" },
       title: { en: "International Yoga Day celebrated with citizens of all ages", hi: "सभी आयु वर्ग के नागरिकों के साथ अंतर्राष्ट्रीय योग दिवस" },
@@ -59,6 +59,10 @@ window.VBF = {
 
   /* ---------- Media coverage ---------- */
   media: [
+    { date: "1993-01-01", when: { en: "Archive", hi: "पुराना संग्रह" }, img: "assets/img/media/eye-structure-article-archive.webp", legacy: true,
+      paper: { en: "Navbharat, Nagpur (archive)", hi: "नवभारत, नागपुर (पुराना संग्रह)" },
+      title: { en: "आँखों की रचना और रोग निदान — article by Dr. Dhananjay Yerne", hi: "आँखों की रचना और रोग निदान — डॉ. धनंजय येरने का लेख" },
+      text: { en: "Public-awareness article explaining the structure of the eye, common eye diseases and their care.", hi: "आँख की संरचना, सामान्य नेत्र रोगों एवं उनकी देखभाल पर जन-जागरूकता लेख।" } },
     { date: "2026-06-22", img: "assets/img/media/hitavada-yoga-day-2026.webp",
       paper: { en: "The Hitavada, Nagpur (p. 7)", hi: "द हितवाद, नागपुर (पृ. 7)" },
       title: { en: "International Yog Day — Vishavabhartiya Foundation", hi: "अंतर्राष्ट्रीय योग दिवस — विश्वभारतीय फाउंडेशन" },
@@ -95,6 +99,14 @@ window.VBF = {
 
   /* ---------- Photo gallery (Foundation + founder legacy; NO partner photos here) ---------- */
   gallery: [
+    { src: "assets/img/gallery/gsa-award-miranda-house-2026.webp", cat: "honour", era: "honour",
+      title: { en: "Global Sustainability Award 2026", hi: "ग्लोबल सस्टेनेबिलिटी अवॉर्ड 2026" }, caption: { en: "Dr. D. K. Yerne receives the award, Miranda House, Delhi, 10 Oct 2026", hi: "डॉ. डी. के. येरने सम्मान ग्रहण करते हुए, मिरांडा हाउस, दिल्ली, 10 अक्टूबर 2026" } },
+    { src: "assets/img/gallery/vidyavachaspati-ceremony-2026.webp", cat: "honour", era: "honour",
+      title: { en: "Vidyavachaspati felicitation 2026", hi: "विद्यावाचस्पति सम्मान समारोह 2026" }, caption: { en: "Pandit Deendayal Upadhyay Hindi Vidyapeeth ceremony", hi: "पं. दीनदयाल उपाध्याय हिंदी विद्यापीठ समारोह" } },
+    { src: "assets/img/gallery/vidyavachaspati-felicitation-2026.webp", cat: "honour", era: "honour",
+      title: { en: "Receiving the Vidyavachaspati honour", hi: "विद्यावाचस्पति सम्मान ग्रहण" }, caption: { en: "Pandit Deendayal Upadhyay Hindi Vidyapeeth, 2026", hi: "पं. दीनदयाल उपाध्याय हिंदी विद्यापीठ, 2026" } },
+    { src: "assets/img/gallery/vidarbha-bhushan-ceremony-2025.webp", cat: "honour", era: "honour",
+      title: { en: "Vidarbha Bhushan Award 2025", hi: "विदर्भ भूषण पुरस्कार 2025" }, caption: { en: "Vidyabhushan Foundation felicitation, Nagpur", hi: "विद्याभूषण फाउंडेशन सत्कार समारोह, नागपुर" } },
     { src: "assets/img/gallery/yoga-day-2026.webp", cat: "health", era: "foundation",
       title: { en: "International Yoga Day 2026", hi: "अंतर्राष्ट्रीय योग दिवस 2026" }, caption: { en: "Community yoga session, Nagpur", hi: "सामुदायिक योग सत्र, नागपुर" } },
     { src: "assets/img/gallery/earth-day-2026.webp", cat: "environment", era: "foundation",
@@ -120,7 +132,25 @@ window.VBF = {
     { src: "assets/img/gallery/awareness-session-children.webp", cat: "community", era: "legacy",
       title: { en: "Awareness session", hi: "जागरूकता सत्र" }, caption: { en: "Outdoor session for schoolchildren", hi: "स्कूली बच्चों के लिए खुला सत्र" } },
     { src: "assets/img/gallery/community-event-lamp.webp", cat: "community", era: "legacy",
-      title: { en: "Community programme", hi: "सामुदायिक कार्यक्रम" }, caption: { en: "Lamp lighting at a public event", hi: "सार्वजनिक कार्यक्रम में दीप प्रज्वलन" } }
+      title: { en: "Community programme", hi: "सामुदायिक कार्यक्रम" }, caption: { en: "Lamp lighting at a public event", hi: "सार्वजनिक कार्यक्रम में दीप प्रज्वलन" } },
+    { src: "assets/img/gallery/eye-camp-spectacles-1.webp", cat: "health", era: "legacy",
+      title: { en: "Eye diagnosis camp — spectacles distribution", hi: "नेत्र रोग निदान शिविर — चश्मा वितरण" }, caption: { en: "Vishvabhartiya Manav Kalyan Sewa Sanstha, Nagpur", hi: "विश्वभारतीय मानव कल्याण सेवा संस्था, नागपुर" } },
+    { src: "assets/img/gallery/eye-camp-spectacles-2.webp", cat: "health", era: "legacy",
+      title: { en: "Spectacles for a camp beneficiary", hi: "शिविर लाभार्थी को चश्मा" }, caption: { en: "Bhavya Netra Rog Nidan Shibir, Nagpur", hi: "भव्य नेत्र रोग निदान शिविर, नागपुर" } },
+    { src: "assets/img/gallery/eye-camp-spectacles-3.webp", cat: "health", era: "legacy",
+      title: { en: "Spectacles distribution to women", hi: "महिलाओं को चश्मा वितरण" }, caption: { en: "Bhavya Netra Rog Nidan Shibir, Nagpur", hi: "भव्य नेत्र रोग निदान शिविर, नागपुर" } },
+    { src: "assets/img/gallery/eye-camp-spectacles-4.webp", cat: "health", era: "legacy",
+      title: { en: "Eye camp beneficiaries", hi: "नेत्र शिविर के लाभार्थी" }, caption: { en: "Bhavya Netra Rog Nidan Shibir, Nagpur", hi: "भव्य नेत्र रोग निदान शिविर, नागपुर" } },
+    { src: "assets/img/gallery/eye-camp-spectacles-5.webp", cat: "health", era: "legacy",
+      title: { en: "Free spectacles for workers", hi: "श्रमिकों को निःशुल्क चश्मा" }, caption: { en: "Bhavya Netra Rog Nidan Shibir, Nagpur", hi: "भव्य नेत्र रोग निदान शिविर, नागपुर" } },
+    { src: "assets/img/gallery/eye-camp-spectacles-6.webp", cat: "health", era: "legacy",
+      title: { en: "Spectacles after eye check-up", hi: "नेत्र जाँच के बाद चश्मा" }, caption: { en: "Bhavya Netra Rog Nidan Shibir, Nagpur", hi: "भव्य नेत्र रोग निदान शिविर, नागपुर" } },
+    { src: "assets/img/gallery/janani-sehat-ayurvedic-camp.webp", cat: "women", era: "legacy",
+      title: { en: "Ayurvedic treatment & diagnosis camp", hi: "आयुर्वेदिक चिकित्सा एवं रोग निदान शिविर" }, caption: { en: "Janani Sehat Abhiyan — women's health", hi: "जननी सेहत अभियान — महिला स्वास्थ्य" } },
+    { src: "assets/img/gallery/free-health-camp-women.webp", cat: "women", era: "legacy",
+      title: { en: "Free health camp", hi: "निःशुल्क आरोग्य शिविर" }, caption: { en: "Women's health awareness", hi: "महिला स्वास्थ्य जागरूकता" } },
+    { src: "assets/img/gallery/disability-felicitation-camp.webp", cat: "community", era: "legacy",
+      title: { en: "Felicitation at a health camp", hi: "स्वास्थ्य शिविर में सम्मान" }, caption: { en: "Support for a differently-abled beneficiary", hi: "दिव्यांग लाभार्थी को सहयोग" } }
   ],
 
   /* ---------- Partner field activities (YKVM, Uttar Pradesh) — shown separately, never as Foundation work ---------- */
@@ -187,10 +217,10 @@ window.VBF = {
 
   /* ---------- Founder's Honours & Recognition (personal awards of Dr. D. K. Yerne) ---------- */
   honours: [
-    { year: "2026", img: "assets/img/awards/global-sustainability-2026.webp",
-      title: { en: "Global Sustainability Awards 2026 — Winner, Individual Changemaker", hi: "ग्लोबल सस्टेनेबिलिटी अवॉर्ड्स 2026 — विजेता, इंडिविजुअल चेंजमेकर" },
-      by: { en: "Global Awards · to be presented 10 Oct 2026, Miranda House, University of Delhi", hi: "ग्लोबल अवॉर्ड्स · 10 अक्टूबर 2026 को मिरांडा हाउस, दिल्ली विश्वविद्यालय में प्रदान किया जाना है" },
-      text: { en: "For health-awareness programmes in Nagpur and Bhandara districts from 1998 to 2026.", hi: "नागपुर और भंडारा ज़िलों में 1998 से 2026 तक स्वास्थ्य-जागरूकता कार्यक्रमों के लिए।" } },
+    { year: "2026", img: "assets/img/awards/gsa-2026-certificate.webp",
+      title: { en: "Global Sustainability Awards 2026 — Individual Changemaker (Top 35)", hi: "ग्लोबल सस्टेनेबिलिटी अवॉर्ड्स 2026 — इंडिविजुअल चेंजमेकर (टॉप 35)" },
+      by: { en: "Global Sustainability Awards, Delhi Chapter · presented 10 Oct 2026, Miranda House, University of Delhi · Certificate ID GSA/2026/6621", hi: "ग्लोबल सस्टेनेबिलिटी अवॉर्ड्स, दिल्ली चैप्टर · 10 अक्टूबर 2026 को मिरांडा हाउस, दिल्ली विश्वविद्यालय में प्रदान · प्रमाणपत्र आईडी GSA/2026/6621" },
+      text: { en: "Recognising commitment to positive change for people and the planet — health-awareness work in Nagpur and Bhandara districts since 1998.", hi: "लोगों एवं पृथ्वी के लिए सकारात्मक परिवर्तन की प्रतिबद्धता हेतु — नागपुर एवं भंडारा ज़िलों में 1998 से स्वास्थ्य-जागरूकता कार्य।" } },
     { year: "2026", img: "assets/img/awards/vidyavachaspati-2026.webp",
       title: { en: "Vidyavachaspati (Honorary Doctorate) — Saraswat Samman", hi: "विद्यावाचस्पति (मानद उपाधि) — सारस्वत सम्मान" },
       by: { en: "Pandit Deendayal Upadhyay Hindi Vidyapeeth, Vrindavan Dham, Mathura · 1 Feb 2026", hi: "पंडित दीनदयाल उपाध्याय हिंदी विद्यापीठ, वृंदावन धाम, मथुरा · 1 फ़रवरी 2026" },
@@ -203,6 +233,14 @@ window.VBF = {
 
   /* ---------- Professional recognition (founder) ---------- */
   recognition: [
+    { year: "2025", img: "assets/img/awards/ioa-life-membership.webp",
+      title: { en: "Life Membership — Indian Optometric Association", hi: "आजीवन सदस्यता — इंडियन ऑप्टोमेट्रिक एसोसिएशन" },
+      by: { en: "Indian Optometric Association · Reg. No. LM-IOA/3481/2025 · issued 29 Jan 2025", hi: "इंडियन ऑप्टोमेट्रिक एसोसिएशन · पंजी. सं. LM-IOA/3481/2025 · 29 जनवरी 2025" },
+      text: { en: "Registered as a bona fide optometrist entitled to practise optometry (MIOA).", hi: "ऑप्टोमेट्री अभ्यास हेतु मान्य ऑप्टोमेट्रिस्ट के रूप में पंजीकृत (MIOA)।" } },
+    { year: "2026", img: "assets/img/awards/habuild-yoga-2026.webp",
+      title: { en: "Official World Record Participant — Highest Online Yoga Participation in a Week", hi: "आधिकारिक विश्व रिकॉर्ड सहभागी — एक सप्ताह में सर्वाधिक ऑनलाइन योग सहभागिता" },
+      by: { en: "Habuild with World Records Union · 21 Jun 2026", hi: "हैबिल्ड एवं वर्ल्ड रिकॉर्ड्स यूनियन · 21 जून 2026" },
+      text: { en: "Certificate of participation in a worldwide yoga movement — not counted as an award.", hi: "विश्वव्यापी योग अभियान में सहभागिता प्रमाणपत्र — पुरस्कार में नहीं गिना गया।" } },
     { year: "—", img: "assets/img/awards/gopha-certificate.webp",
       title: { en: "Certificate of Participation — GOPHA", hi: "सहभागिता प्रमाणपत्र — GOPHA" },
       by: { en: "Global Optometry Public Health Alliance", hi: "ग्लोबल ऑप्टोमेट्री पब्लिक हेल्थ अलायंस" },
@@ -211,6 +249,10 @@ window.VBF = {
 
   /* ---------- Capacity building / training ---------- */
   training: [
+    { year: "2018", img: "assets/img/awards/optometry-foundation-cme.webp",
+      title: { en: "CME in Spectacle Dispensing & Contact Lenses", hi: "चश्मा वितरण एवं कॉन्टैक्ट लेंस पर CME" },
+      by: { en: "Optometry Foundation · 20–22 Jan 2018", hi: "ऑप्टोमेट्री फाउंडेशन · 20–22 जनवरी 2018" },
+      text: { en: "Continuing education programme attended by Dr. D. K. Yerne.", hi: "डॉ. डी. के. येरने द्वारा सतत शिक्षा कार्यक्रम में सहभागिता।" } },
     { year: "2026", img: "assets/img/awards/collective-action-india-2026.webp",
       title: { en: "Grant-Ready NGO Master Class — Certificate of Completion", hi: "ग्रांट-रेडी NGO मास्टर क्लास — पूर्णता प्रमाणपत्र" },
       by: { en: "Collective Action India · 16–21 Mar 2026 · ID CAI-GRANTREADY-2026-027", hi: "कलेक्टिव एक्शन इंडिया · 16–21 मार्च 2026 · आईडी CAI-GRANTREADY-2026-027" },
