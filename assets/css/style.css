@@ -421,3 +421,9 @@ input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="tr
 .social.hdr .si{width:32px!important;height:32px!important}
 @media (min-width:1241px){.social.hdr{display:none!important}}
 @media (max-width:420px){.social.hdr{display:none!important}}
+/* dropdown sits clearly below the gold header line and above it in stacking */
+.site-header::after{z-index:0;pointer-events:none}
+@media (min-width:1241px){
+  .nav .dd-menu{z-index:60;margin-top:16px}
+  .nav .dd-menu::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+}
