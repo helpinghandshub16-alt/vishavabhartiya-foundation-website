@@ -103,7 +103,7 @@ def NAV():
     return [
      ("index.html", t("Home","होम"), None),
      (None, t("About","हमारे बारे में"), [("about.html",t("About Us","परिचय")),("about.html#vision",t("Vision &amp; Mission","दृष्टि एवं मिशन")),("about.html#objectives",t("Our Objectives","हमारे उद्देश्य")),("about.html#journey",t("Our Journey","हमारी यात्रा")),("about.html#team",t("Our Team","हमारी टीम")),("about.html#partners",t("Our Partners","हमारे साझेदार"))]),
-     (None, t("Programmes","कार्यक्रम"), [("programs.html",t("Focus Areas &amp; Programmes","कार्यक्षेत्र एवं कार्यक्रम")),("programs.html#health",t("Health &amp; Eye Care","स्वास्थ्य एवं नेत्र सेवा")),("programs.html#education",t("Education &amp; Skill Development","शिक्षा एवं कौशल विकास")),("programs.html#women",t("Women Empowerment","महिला सशक्तिकरण")),("programs.html#environment",t("Environment &amp; Plantation","पर्यावरण एवं वृक्षारोपण")),("programs.html#awareness",t("Social Awareness","सामाजिक जागरूकता"))]),
+     (None, t("Programmes","कार्यक्रम"), [("programs.html",t("Focus Areas &amp; Programmes","कार्यक्षेत्र एवं कार्यक्रम")),("eye-camp-campaign.html",t("Eye Camp Campaign 2026–27","नेत्र शिविर अभियान 2026–27")),("programs.html#health",t("Health &amp; Eye Care","स्वास्थ्य एवं नेत्र सेवा")),("programs.html#education",t("Education &amp; Skill Development","शिक्षा एवं कौशल विकास")),("programs.html#women",t("Women Empowerment","महिला सशक्तिकरण")),("programs.html#environment",t("Environment &amp; Plantation","पर्यावरण एवं वृक्षारोपण")),("programs.html#awareness",t("Social Awareness","सामाजिक जागरूकता"))]),
      ("impact.html", t("Impact &amp; Awards","प्रभाव एवं सम्मान"), None),
      ("media.html", t("Media","मीडिया"), None),
      ("gallery.html", t("Gallery","गैलरी"), None),
@@ -192,16 +192,16 @@ def page(fname, title, desc, body, extra_head=""):
 <meta name="theme-color" content="#3a2214">
 <link rel="icon" type="image/png" href="{R()}assets/img/favicon.png"><link rel="apple-touch-icon" href="{R()}assets/img/apple-touch-icon.png">
 {FONTS}
-<link rel="stylesheet" href="{R()}assets/css/style.css?v=20261121a">{extra_head}'''
+<link rel="stylesheet" href="{R()}assets/css/style.css?v=20261126a">{extra_head}'''
     inner = f'''{header(fname)}
 <main id="main">
 {body}
 </main>
 {footer()}
-<script src="{R()}assets/js/config.js?v=20261121a"></script>
-<script src="{R()}assets/js/img-sizes.js?v=20261121a"></script>
-<script src="{R()}assets/js/data.js?v=20261121a"></script>
-<script src="{R()}assets/js/main.js?v=20261121a"></script>'''
+<script src="{R()}assets/js/config.js?v=20261126a"></script>
+<script src="{R()}assets/js/img-sizes.js?v=20261126a"></script>
+<script src="{R()}assets/js/data.js?v=20261126a"></script>
+<script src="{R()}assets/js/main.js?v=20261126a"></script>'''
     full = f'''<!doctype html>
 <html lang="{LANG}" data-base="{R()}">
 <head>
@@ -343,6 +343,8 @@ def build_home():
   <p>{t("Figures we can document. Legacy figures relate to the founder and the earlier Sanstha; beneficiary counts will be published in the Foundation's annual report.","वही आँकड़े जिनका प्रमाण उपलब्ध है। विरासत संबंधी आँकड़े संस्थापक एवं पूर्ववर्ती संस्था के हैं; लाभार्थियों की संख्या फाउंडेशन की वार्षिक रिपोर्ट में प्रकाशित की जाएगी।")}</p></div>
   {STATS()}
 </div></section>
+
+{CAMP_BANNER()}
 
 <section><div class="wrap">
   <div class="sec-head center"><span class="eyebrow">{t("Focus areas","कार्यक्षेत्र")}</span><hr class="rule"><h2>{t("Where we work","हम कहाँ काम करते हैं")}</h2>
@@ -555,7 +557,8 @@ def build_programs():
 <section class="tight"><div class="wrap">
   <div class="note info" style="margin-bottom:28px">{t("Activities dated before March 2026 were carried out by the founder and the earlier organisation, Vishvabhartiya Manav Kalyan Sewa Sanstha. Vishavabhartiya Foundation (incorporated 12 March 2026) carries this work forward.","मार्च 2026 से पहले की गतिविधियाँ संस्थापक एवं पूर्ववर्ती संस्था विश्वभारतीय मानव कल्याण सेवा संस्था द्वारा की गई थीं। विश्वभारतीय फाउंडेशन (स्थापना 12 मार्च 2026) इस कार्य को आगे बढ़ा रहा है।")}</div>
   <div class="grid g3">{focus_cards()}</div></div></section>
-<section style="padding-top:0"><div class="wrap">
+''' + CAMP_BANNER() + f'''
+<section><div class="wrap">
 ''' + chapter("health", False, t("Health &amp; Eye Care","स्वास्थ्य एवं नेत्र सेवा"), t("Free eye check-ups — a legacy since 1998","निःशुल्क नेत्र जाँच — 1998 से चली आ रही विरासत"),
   t("The longest-running work of our founder and the earlier Sanstha, and now the Foundation's core programme. Free screening is held at the founder's eye-care centre in Nagpur and at camps wherever people gather, with spectacles for those who cannot afford them.",
     "संस्थापक एवं पूर्ववर्ती संस्था का सबसे पुराना कार्य, जो अब फाउंडेशन का मुख्य कार्यक्रम है। नागपुर स्थित संस्थापक के नेत्र-सेवा केंद्र और जहाँ लोग एकत्र होते हैं वहाँ शिविरों में निःशुल्क जाँच होती है, और ज़रूरतमंदों को चश्मे दिए जाते हैं।"),
@@ -746,6 +749,8 @@ def build_donate():
   <p class="muted small mt">{t("How donations are used: your donation supports programme delivery — screening, spectacles, camp materials and awareness activities — which can also include necessary administrative, compliance and logistics costs, as permitted by law. Details will be reported in our annual report.","दान का उपयोग: आपका दान कार्यक्रमों — जाँच, चश्मे, शिविर सामग्री एवं जागरूकता गतिविधियों — में सहायक होता है, जिसमें कानून द्वारा अनुमत आवश्यक प्रशासनिक, अनुपालन एवं परिवहन व्यय भी शामिल हो सकते हैं। विवरण हमारी वार्षिक रिपोर्ट में दिया जाएगा।")} <a href="donation-policy.html">{t("Donation &amp; Refund Policy","दान एवं धनवापसी नीति")}</a></p>
 </div></section>
 
+{CAMP_BANNER()}
+
 <section class="alt" id="receipt" style="scroll-margin-top:100px"><div class="wrap split" style="align-items:start">
   <div>
     <span class="eyebrow">{t("80G receipt","80G रसीद")}</span><hr class="rule">
@@ -861,7 +866,7 @@ def build_csr():
 
 <section class="alt"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">{t("Proposed project areas","प्रस्तावित परियोजना क्षेत्र")}</span><hr class="rule"><h2>{t("Where a CSR partnership can start","CSR साझेदारी कहाँ से शुरू हो सकती है")}</h2>
-  <p>{t("Indicative project areas based on our existing work. Scope, budget and duration are finalised with each partner after a needs discussion — we do not publish fixed budgets.","हमारे मौजूदा कार्य पर आधारित संकेतात्मक क्षेत्र। दायरा, बजट एवं अवधि हर साझेदार के साथ आवश्यकता-चर्चा के बाद तय होते हैं — हम कोई निश्चित बजट प्रकाशित नहीं करते।")}</p></div>
+  <p>{t("Indicative project areas based on our existing work. Scope, budget and duration are finalised with each partner after a needs discussion. Our flagship <a href='eye-camp-campaign.html'>Eye Camp Campaign 2026–27</a> has a published budget and can be sponsored in full or in part.","हमारे मौजूदा कार्य पर आधारित संकेतात्मक क्षेत्र। दायरा, बजट एवं अवधि हर साझेदार के साथ आवश्यकता-चर्चा के बाद तय होते हैं। हमारे प्रमुख <a href='eye-camp-campaign.html'>नेत्र शिविर अभियान 2026–27</a> का बजट प्रकाशित है और इसे पूरा या आंशिक रूप से प्रायोजित किया जा सकता है।")}</p></div>
   <div class="grid g4">{proj}</div>
   <div class="grid g2 mt">
     <div class="panel"><h3>{t("Indicative budget","संकेतात्मक बजट")}</h3><p class="muted">{t("Prepared per project as a line-item budget after the needs discussion and shared with the proposal.","हर परियोजना के लिए आवश्यकता-चर्चा के बाद मदवार बजट बनाकर प्रस्ताव के साथ साझा किया जाता है।")}</p></div>
@@ -1055,16 +1060,130 @@ def build_legal():
       (t("No retaliation","प्रतिशोध नहीं"), f'<p>{t("No one will be denied services or treated unfairly for raising a concern in good faith. You may raise a concern anonymously, though that can limit our ability to follow up.","सद्भाव से चिंता उठाने पर किसी को सेवा से वंचित या अनुचित व्यवहार नहीं किया जाएगा। आप गुमनाम रूप से भी शिकायत कर सकते हैं, हालाँकि इससे आगे की कार्रवाई सीमित हो सकती है।")}</p>'),
     ], t("Grievance Mechanism","शिकायत निवारण व्यवस्था"), t("How to raise a grievance with Vishavabhartiya Foundation and how complaints are handled.","विश्वभारतीय फाउंडेशन में शिकायत कैसे दर्ज करें और उसका निपटारा कैसे होता है।"))
 
+def CAMP_BANNER():
+    return f"""<section class="camp-band"><div class="wrap">
+  <div class="cb-text">
+    <span class="eyebrow">{t("Flagship campaign · 2026–27","प्रमुख अभियान · 2026–27")}</span>
+    <h2>{t("Free Eye Check-Up &amp; Spectacles Distribution Campaign","निःशुल्क नेत्र जाँच एवं चश्मा वितरण अभियान")}</h2>
+    <p>{t("144 free eye camps in one year and 14,400 pairs of quality spectacles for people who cannot afford them. Help us reach every one of them.","एक वर्ष में 144 निःशुल्क नेत्र शिविर और ज़रूरतमंदों को 14,400 गुणवत्तापूर्ण चश्मे। हर लाभार्थी तक पहुँचने में हमारा साथ दें।")}</p>
+    <div class="ctas"><a class="btn btn-gold" href="eye-camp-campaign.html">{t("See the campaign","अभियान देखें")}</a><a class="btn btn-light" href="donate.html">{t("Donate ₹499 = 1 pair of spectacles","₹499 दान = 1 चश्मा")}</a></div>
+  </div>
+  <ul class="cb-stats">
+    <li><b>144</b><span>{t("eye camps","नेत्र शिविर")}</span></li>
+    <li><b>14,400</b><span>{t("spectacles","चश्मे")}</span></li>
+    <li><b>3</b><span>{t("camps every week","शिविर हर सप्ताह")}</span></li>
+    <li><b>₹1 {t("crore","करोड़")}</b><span>{t("total budget","कुल बजट")}</span></li>
+  </ul>
+</div></section>"""
+
+def build_campaign():
+    BUD = [
+     ("1", t("Spectacles distribution","चश्मा वितरण"), t("14,400 spectacles @ ₹499 each","14,400 चश्मे @ ₹499 प्रति चश्मा"), 7185600),
+     ("2", t("Pandal, chairs &amp; tables","पंडाल, कुर्सियाँ एवं टेबल"), t("₹5,000 per camp × 144 camps","₹5,000 प्रति शिविर × 144 शिविर"), 720000),
+     ("3a", t("Honorarium — Optometrist (1)","मानदेय — ऑप्टोमेट्रिस्ट (1)"), t("₹25,000 / month × 12 months","₹25,000 / माह × 12 माह"), 300000),
+     ("3b", t("Honorarium — MSW / Social Workers (4)","मानदेय — MSW / सोशल वर्कर (4)"), t("4 × ₹12,000 / month × 12 months","4 × ₹12,000 / माह × 12 माह"), 576000),
+     ("3c", t("Honorarium — Helpers (2)","मानदेय — सहायक (2)"), t("2 × ₹8,000 / month × 12 months","2 × ₹8,000 / माह × 12 माह"), 192000),
+     ("3d", t("Honorarium — Driver (1)","मानदेय — ड्राइवर (1)"), t("₹12,000 / month × 12 months","₹12,000 / माह × 12 माह"), 144000),
+     ("4", t("Vehicle expenses","वाहन व्यय"), t("Fuel, maintenance &amp; transport for 144 camps","144 शिविरों हेतु ईंधन, रखरखाव एवं परिवहन"), 288000),
+     ("5", t("Banners, posters &amp; printing","बैनर, पोस्टर एवं छपाई"), t("Flex banners, posters, registration cards","फ्लेक्स बैनर, पोस्टर, पंजीकरण कार्ड"), 144000),
+     ("6", t("Stationery &amp; diagnostic equipment","स्टेशनरी एवं जाँच उपकरण"), t("Eye charts, trial sets, pens, pads, files","आई चार्ट, ट्रायल सेट, पेन, पैड, फ़ाइल"), 100000),
+     ("7", t("Refreshment &amp; hospitality","जलपान एवं आतिथ्य"), t("For patients and team, 144 camps","मरीज़ों एवं टीम हेतु, 144 शिविर"), 144000),
+     ("8", t("Administrative &amp; contingency","प्रशासनिक एवं आकस्मिक व्यय"), t("Audit, project reporting, crowdfunding platform fees, emergencies","ऑडिट, परियोजना रिपोर्टिंग, क्राउडफंडिंग प्लेटफ़ॉर्म शुल्क, आपात व्यय"), 206400),
+    ]
+    def inr(n):
+        s=str(n); last=s[-3:]; rest=s[:-3]; parts=[]
+        while len(rest)>2: parts.insert(0,rest[-2:]); rest=rest[:-2]
+        if rest: parts.insert(0,rest)
+        return "₹" + (",".join(parts)+"," if parts else "") + last
+    total=sum(x[3] for x in BUD)
+    assert total==10000000, total
+    rows="".join(f'<tr><td class="num">{n}</td><td><b>{a}</b></td><td class="muted small">{c}</td><td class="num amt">{inr(v)}</td></tr>' for n,a,c,v in BUD)
+    rows+=f'<tr class="total"><td></td><td colspan="2"><b>{t("Total project cost (1 year, 144 camps) — ₹1 crore","कुल परियोजना लागत (1 वर्ष, 144 शिविर) — ₹1 करोड़")}</b></td><td class="num amt"><b>{inr(total)}</b></td></tr>'
+    spect=7185600; ground=720000+144000+288000+144000+100000; team=300000+576000+192000+144000; admin=206400
+    pct=lambda v: f"{v*100/total:.1f}%"
+    SUM=[(t("Spectacles","चश्मे"),spect),(t("On-ground arrangements (pandal, banners, vehicle, equipment, refreshments)","ज़मीनी व्यवस्था (पंडाल, बैनर, वाहन, उपकरण, जलपान)"),ground),(t("Team honorarium","टीम मानदेय"),team),(t("Admin, audit, platform fees &amp; contingency","प्रशासन, ऑडिट, प्लेटफ़ॉर्म शुल्क एवं आकस्मिक"),admin)]
+    assert spect+ground+team+admin==total
+    bars="".join(f'<div class="sbar"><div class="sb-top"><span>{a}</span><b>{inr(v)} · {pct(v)}</b></div><div class="sb-track"><i style="width:{v*100/total:.1f}%"></i></div></div>' for a,v in SUM)
+    body = banner(t("Eye Camp Campaign","नेत्र शिविर अभियान"), t("Free Eye Check-Up &amp; Spectacles Distribution Campaign 2026–27","निःशुल्क नेत्र जाँच एवं चश्मा वितरण अभियान 2026–27"),
+        t("A one-year crowdfunding campaign by Vishavabhartiya Foundation: 144 free eye camps and 14,400 pairs of spectacles for people with weak eyesight who cannot afford care.","विश्वभारतीय फाउंडेशन का एक वर्षीय क्राउडफंडिंग अभियान: कमज़ोर नज़र वाले ज़रूरतमंद लोगों के लिए 144 निःशुल्क नेत्र शिविर और 14,400 चश्मे।")) + f"""
+<section><div class="wrap split" style="align-items:start">
+  <div>
+    <span class="eyebrow">{t("Executive summary","परियोजना परिचय")}</span><hr class="rule">
+    <h2>{t("Clear sight for 14,400 people in one year","एक वर्ष में 14,400 लोगों को साफ़ दृष्टि")}</h2>
+    <p>{t("Weak eyesight keeps children from reading the blackboard, workers from earning and elders from living independently — and a simple pair of spectacles is often all it takes. Building on the founder's free eye-care work since 1998, Vishavabhartiya Foundation will run <b>144 free eye camps</b> over one year (2026–27) and distribute <b>high-quality spectacles to 14,400 beneficiaries</b>.","कमज़ोर नज़र के कारण बच्चे ब्लैकबोर्ड नहीं पढ़ पाते, मज़दूर काम नहीं कर पाते और बुज़ुर्ग आत्मनिर्भर नहीं रह पाते — और अक्सर एक साधारण चश्मा ही इसका समाधान होता है। 1998 से चल रहे संस्थापक के निःशुल्क नेत्र-सेवा कार्य को आगे बढ़ाते हुए विश्वभारतीय फाउंडेशन एक वर्ष (2026–27) में <b>144 निःशुल्क नेत्र शिविर</b> लगाएगा और <b>14,400 लाभार्थियों को उच्च गुणवत्ता वाले चश्मे</b> देगा।")}</p>
+    <div class="note info">{t("<b>Status:</b> proposed campaign, open for donations and CSR support. Progress (camps held, people screened, spectacles given) will be published here and in our annual report.","<b>स्थिति:</b> प्रस्तावित अभियान, दान एवं CSR सहयोग हेतु खुला। प्रगति (आयोजित शिविर, जाँचे गए लोग, वितरित चश्मे) यहाँ और वार्षिक रिपोर्ट में प्रकाशित की जाएगी।")}</div>
+    <p class="mt"><a class="btn btn-gold" href="donate.html">{t("Donate now","अभी दान करें")}</a> <a class="btn btn-line" href="contact.html#csr">{t("Fund through CSR","CSR से सहयोग करें")}</a></p>
+  </div>
+  <div class="photo-stack">{IMG("assets/img/gallery/eye-camp-spectacles-1.webp", t("Spectacles distribution at a free eye camp","निःशुल्क नेत्र शिविर में चश्मा वितरण"), lazy=False)}
+  <div class="badge"><b>₹499</b><small>{t("gives one person a pair of spectacles","एक व्यक्ति को एक चश्मा")}</small></div></div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">{t("Project schedule &amp; plan","शिविर का विवरण")}</span><h2>{t("How the 144 camps add up","144 शिविरों का हिसाब")}</h2></div>
+  <div class="stats">
+    <div class="stat"><b>3</b><span>{t("camp days a week — Tuesday, Thursday, Saturday","शिविर दिवस प्रति सप्ताह — मंगलवार, गुरुवार, शनिवार")}</span></div>
+    <div class="stat"><b>12</b><span>{t("camps a month (3 × 4 weeks)","शिविर प्रति माह (3 × 4 सप्ताह)")}</span></div>
+    <div class="stat"><b>144</b><span>{t("camps in the year (12 × 12 months)","शिविर प्रति वर्ष (12 × 12 माह)")}</span></div>
+    <div class="stat"><b>~100</b><span>{t("spectacles distributed per camp","चश्मे प्रति शिविर")}</span></div>
+    <div class="stat"><b>14,400</b><span>{t("spectacles a year (100 × 144)","चश्मे प्रति वर्ष (100 × 144)")}</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap split" style="align-items:start">
+  <div>
+    <span class="eyebrow">{t("Working team","कार्य टीम")}</span><hr class="rule"><h2>{t("Eight people on the road","आठ सदस्यों की टीम")}</h2>
+    <ul class="tlist">
+      <li><span>{t("Doctor / Optometrist — eye examination and refraction","डॉक्टर / ऑप्टोमेट्रिस्ट — नेत्र जाँच एवं दृष्टि परीक्षण")}</span><span class="st ok">1</span></li>
+      <li><span>{t("MSW / Social Workers — mobilisation, registration, follow-up","MSW / सोशल वर्कर — जन-संपर्क, पंजीकरण, फ़ॉलो-अप")}</span><span class="st ok">4</span></li>
+      <li><span>{t("Helpers — camp set-up and spectacles distribution","सहायक — शिविर व्यवस्था एवं चश्मा वितरण")}</span><span class="st ok">2</span></li>
+      <li><span>{t("Driver — team and equipment transport","ड्राइवर — टीम एवं उपकरण परिवहन")}</span><span class="st ok">1</span></li>
+    </ul>
+  </div>
+  <div>
+    <span class="eyebrow">{t("Where the money goes","राशि कहाँ लगेगी")}</span><hr class="rule"><h2>{t("Budget at a glance","बजट एक नज़र में")}</h2>
+    <div class="sbars">{bars}</div>
+  </div>
+</div></section>
+
+<section class="alt" id="budget" style="scroll-margin-top:100px"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">{t("Estimated budget","अनुमानित बजट")}</span><hr class="rule"><h2>{t("Budget breakdown — 1 year, 144 camps","बजट विवरण — 1 वर्ष, 144 शिविर")}</h2></div>
+  <div class="table-scroll"><table class="ledger budget">
+    <thead><tr><th>{t("No.","क्र.")}</th><th>{t("Item","मद")}</th><th>{t("Basis","विवरण / गणना")}</th><th style="text-align:right">{t("Amount","राशि")}</th></tr></thead>
+    <tbody>{rows}</tbody></table></div>
+  <p class="muted small mt">{t("Average cost per camp: about ₹69,444 (total ÷ 144). Figures are estimates; actual spending will be reported against this budget.","प्रति शिविर औसत लागत: लगभग ₹69,444 (कुल ÷ 144)। आँकड़े अनुमानित हैं; वास्तविक व्यय इसी बजट के अनुसार रिपोर्ट किया जाएगा।")}</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head center"><span class="eyebrow">{t("Ways to give","सहयोग के तरीके")}</span><hr class="rule"><h2>{t("Every contribution has a clear result","हर योगदान का स्पष्ट परिणाम")}</h2></div>
+  <div class="grid g4">
+    <div class="focus give"><b>₹499</b><h3>{t("One pair of spectacles","एक चश्मा")}</h3><p>{t("Clear sight for one person.","एक व्यक्ति को साफ़ दृष्टि।")}</p></div>
+    <div class="focus give"><b>₹4,990</b><h3>{t("Ten pairs","दस चश्मे")}</h3><p>{t("A family or a classroom corner.","एक परिवार या कक्षा का एक कोना।")}</p></div>
+    <div class="focus give"><b>₹5,000</b><h3>{t("Pandal for a camp","एक शिविर का पंडाल")}</h3><p>{t("Shade, chairs and tables for one camp day.","एक शिविर दिवस के लिए पंडाल, कुर्सी एवं टेबल।")}</p></div>
+    <div class="focus give"><b>₹49,900</b><h3>{t("Spectacles for a full camp","पूरे शिविर के चश्मे")}</h3><p>{t("About 100 pairs — one camp's distribution.","लगभग 100 चश्मे — एक शिविर का वितरण।")}</p></div>
+  </div>
+  <p class="center mt"><a class="btn btn-gold" href="donate.html">{t("Donate by UPI / bank transfer","UPI / बैंक से दान करें")}</a> <a class="btn btn-line" href="donate.html#receipt">{t("Get 80G receipt","80G रसीद पाएँ")}</a></p>
+  <p class="center muted small">{t("Donations are eligible for tax benefit under Section 80G. Please mention “Eye Camp Campaign” in the payment note.","दान पर धारा 80G के अंतर्गत कर-लाभ उपलब्ध है। भुगतान नोट में “Eye Camp Campaign” लिखें।")}</p>
+</div></section>
+
+<section class="tight"><div class="wrap"><div class="cta-band">
+  <div><h2>{t("Sponsor camps through CSR","CSR के माध्यम से शिविर प्रायोजित करें")}</h2>
+  <p>{t("Companies can adopt a month (12 camps), a quarter or the full campaign under Schedule VII (health care). We share the proposal, MoU and progress reports with every CSR partner.","कंपनियाँ अनुसूची VII (स्वास्थ्य सेवा) के अंतर्गत एक माह (12 शिविर), एक तिमाही या पूरा अभियान अपना सकती हैं। हर CSR साझेदार के साथ प्रस्ताव, MoU एवं प्रगति रिपोर्ट साझा की जाती है।")}</p></div>
+  <div class="ctas"><a class="btn btn-gold" href="contact.html#csr">{t("Discuss CSR support","CSR सहयोग पर चर्चा करें")}</a><a class="btn btn-light" href="csr.html">{t("CSR details","CSR विवरण")}</a></div>
+</div></div></section>"""
+    page("eye-camp-campaign.html", t("Free Eye Check-Up &amp; Spectacles Campaign 2026–27","निःशुल्क नेत्र जाँच एवं चश्मा वितरण अभियान 2026–27"),
+         t("Support Vishavabhartiya Foundation's 2026–27 campaign: 144 free eye camps and 14,400 spectacles in Vidarbha. ₹499 gives one person a pair of spectacles. 80G tax benefit.",
+           "विश्वभारतीय फाउंडेशन का 2026–27 अभियान: 144 निःशुल्क नेत्र शिविर एवं 14,400 चश्मे। ₹499 = एक व्यक्ति के लिए चश्मा। 80G कर-लाभ उपलब्ध।"), body)
+
 # ======================================================================= BUILD
 for LANG in LANGS:
     build_home(); build_about(); build_programs(); build_impact(); build_media(); build_gallery()
-    build_registrations(); build_donate(); build_csr(); build_transparency(); build_contact(); build_legal()
+    build_registrations(); build_donate(); build_csr(); build_campaign(); build_transparency(); build_contact(); build_legal()
 
 site = CONFIG["site_url"].rstrip("/")
 cfg = {"siteUrl": site, "emails": CONFIG["emails"], "whatsapp": CONFIG["whatsapp"], "forms": CONFIG["forms"]}
-open(os.path.join(OUT, "assets/js/config.js?v=20261121a"), "w", encoding="utf-8").write(
+open(os.path.join(OUT, "assets/js/config.js?v=20261126a"), "w", encoding="utf-8").write(
     "/* Generated from CONFIG in build.py. You may also edit here directly: emails and forms.endpoint take effect without a rebuild. */\nwindow.VBF_CONFIG = " + json.dumps(cfg, indent=2) + ";\n")
-open(os.path.join(OUT, "assets/js/img-sizes.js?v=20261121a"), "w").write("window.VBF_SIZES=" + json.dumps(SIZES, separators=(",", ":")) + ";\n")
+open(os.path.join(OUT, "assets/js/img-sizes.js?v=20261126a"), "w").write("window.VBF_SIZES=" + json.dumps(SIZES, separators=(",", ":")) + ";\n")
 
 def loc(lang, f): return site + "/" + ("hi/" if lang == "hi" else "") + ("" if f == "index.html" else f)
 sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']

@@ -427,3 +427,28 @@ input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="tr
   .nav .dd-menu{z-index:60;margin-top:16px}
   .nav .dd-menu::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
 }
+/* Eye camp campaign */
+.camp-band{background:linear-gradient(135deg,#3b2414 0%,#5a3a20 60%,#7a5228 100%);color:#fff;padding:56px 0}
+.camp-band .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:center}
+.camp-band h2{color:#fff;margin:.3em 0 .4em}
+.camp-band p{color:#eadcc8}
+.camp-band .eyebrow{color:var(--gold-lt)}
+.camp-band .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.cb-stats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cb-stats li{background:rgba(255,255,255,.08);border:1px solid rgba(212,168,83,.35);border-radius:var(--r);padding:18px 16px;text-align:center}
+.cb-stats b{display:block;font-family:var(--font-display);font-weight:400;font-size:2rem;color:var(--gold-lt);line-height:1.1}
+.cb-stats span{font-size:.88rem;color:#e7d9c7}
+@media (max-width:880px){.camp-band .wrap{grid-template-columns:minmax(0,1fr);gap:28px}}
+.tlist{list-style:none;padding:0;margin:18px 0 0}
+.tlist li{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(90,58,32,.15)}
+.tlist .st{flex:none;min-width:40px;text-align:center;font-weight:700;background:var(--walnut);color:#fff;border-radius:20px;padding:4px 10px}
+.sbars{margin-top:18px;display:grid;gap:16px}
+.sb-top{display:flex;justify-content:space-between;gap:12px;font-size:.93rem;margin-bottom:6px}
+.sb-top b{white-space:nowrap;color:var(--walnut)}
+.sb-track{height:10px;background:rgba(90,58,32,.12);border-radius:6px;overflow:hidden}
+.sb-track i{display:block;height:100%;background:linear-gradient(90deg,#b8862f,#d4a853);border-radius:6px}
+.ledger.budget td.num,.ledger.budget th:first-child{text-align:center;white-space:nowrap}
+.ledger.budget td.amt{text-align:right;font-variant-numeric:tabular-nums}
+.ledger.budget tr.total td{border-top:2px solid var(--walnut);background:rgba(212,168,83,.15)}
+.focus.give>b{display:block;font-family:var(--font-display);font-weight:400;font-size:1.9rem;color:var(--walnut)}
+@media (max-width:600px){.sb-top{flex-direction:column;gap:2px}}
